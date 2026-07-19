@@ -89,8 +89,8 @@ mustbemultipleof(psize, pagesize, 'physical memory must be a multiple of the pag
 
 # print some useful info, like the darn page table 
 pages = int(psize / pagesize)
-used = array('i')
-pt   = array('i')
+used = array.array('i')
+pt   = array.array('i')
 for i in range(0,pages):
     used.insert(i,0)
 vpages = int(asize / pagesize)
